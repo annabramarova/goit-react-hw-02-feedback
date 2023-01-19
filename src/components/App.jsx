@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Container from './Container';
 import Statistics from './Statistics';
 import FeedbackOptions from './FeedbackOptions';
 import Section from './Section';
@@ -14,8 +13,8 @@ export class App extends Component {
     bad: 0
   };
   
-  handleClick = evt => {
-    const key = evt.currentTarget.id;
+  handleClick = optionId => {
+    const key = Object.keys(this.state)[optionId];
     this.setState(prevState => ({ [key]: prevState[key] + 1 }));
   };
   
@@ -37,14 +36,14 @@ export class App extends Component {
 
 
     return (
-      <Container>
-        <Section title='Please leave your feedback'>
+      <>
+        <Section title="Please leave your feedback">
           <FeedbackOptions
             options={statsKeys}
             onLeaveFeedback={this.handleClick} />
           </Section>
-        <Section title='Statistics'>
-          {total ? (
+        <Section title="Statistics">
+          {total>0 ? (
             <Statistics good={good}
               neutral={neutral}
               bad={bad}
@@ -53,11 +52,8 @@ export class App extends Component {
               />)
             :(<Notification message="There is no feedback" />)}
         </Section>
-      </Container>
+      </>
     );
   };
 }
 
-
-              // total={total}
-              // positivePercentage={positivePercentage}

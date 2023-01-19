@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-export const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
+const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
     <ul>
         <li> <p>Good: {good}</p>
       </li>

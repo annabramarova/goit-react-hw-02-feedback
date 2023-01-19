@@ -1,7 +1,36 @@
 import styled from '@emotion/styled';
 
-const SectionContainer = styled.div``;
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 32px;
+    width: fit-content;
+    margin: auto;
+    height: 40vh;
+    color: #010101;`;
     
-const Title = styled.h2``;
+const Title = styled.h2`
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.35;
+  text-align: center;
+  margin-bottom: 0.6em;
+`;
+
+const Text = styled.span`
+  position: relative;
+  ::after {
+    content: '';
+    position: absolute;
+    left: -1em;
+    right: -1em;
+    bottom: -0.3em;
+    height: 1px;
+    background-color: currentColor;
+  }
+`;
  
-export {SectionContainer, Title}
+export {Container, Title, Text}
