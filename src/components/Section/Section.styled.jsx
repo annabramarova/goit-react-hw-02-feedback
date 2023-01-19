@@ -7,10 +7,11 @@ const Container = styled.div`
     align-items: center;
     text-align: center;
     padding: 0 32px;
-    width: fit-content;
-    margin: auto;
+    gap: 2em;
+   width: fit-content;
     height: 40vh;
-    color: #010101;`;
+    margin: auto;
+    color: #010101;`
     
 const Title = styled.h2`
   font-weight: 600;
