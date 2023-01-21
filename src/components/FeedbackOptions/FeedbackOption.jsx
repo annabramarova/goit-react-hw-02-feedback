@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {Button, ButtonsList} from './FeedbackOptions.styled'
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
@@ -17,8 +17,8 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 
 
 FeedbackOptions.propTypes = {
-  options: propTypes.arrayOf(propTypes.string).isRequired,
-  onLeaveFeedback: propTypes.func.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
 };
 
 
